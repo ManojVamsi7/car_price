@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles1.css">
+    <title>Car Price Prediction</title>
+    <style>
+        /* Center the heading text at the top */
+        h1 {
+            text-align: center;
+            font-weight: bold; /* Make the heading text bolder */
+            margin-top: 0px; /* Add space between the title and form */
+        }
+
+        /* Center-align the entire page content */
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 90vh; /* Ensure full viewport height */
+            background-image: url('https://static.vecteezy.com/system/resources/previews/026/481/324/original/the-world-of-classic-muscle-cars-with-this-captivating-4k-wallpaper-free-photo.jpg'); /* Set the background image URL */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+        }
+
+        /* Center-align the form elements */
+        .centered-form {
+            text-align: center;
+        }
+
+        /* Style the labels */
+        label {
+            font-weight: bold; /* Make the labels bolder */
+        }
+
+        /* Add some spacing between form elements */
+        .input-container {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background color */
+            padding: 50px; /* Add padding for spacing */
+            border-radius: 10px; /* Rounded corners */
+            margin: 20px 0; /* Adjusted margin for spacing */
+            width: 70%; /* Set width to 80% of the container */
+        }
+
+        /* Center-align the predicted price */
+        .predicted-price {
+            text-align: center;
+            margin-top: 10px; /* Adjusted margin for spacing */
+            font-weight: bold; /* Make the predicted price text bolder */
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background color */
+            padding: 10px; /* Slightly reduced padding for smaller size */
+            border-radius: 10px; /* Rounded corners */
+            width: 35%; /* Reduced width for a smaller block */
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Price Prediction</h1> <!-- Title at the top center -->
+    <div class="page-container">
+        <form method="POST" action="/" class="centered-form">
+            <div class="input-container">
+                <div class="form-input">
+                    <h2>
+                    <label for="year_2022">Price in 2022:</label>
+                    <input type="text" name="year_2022" id="year_2022" required>
+                </h2>
+                </div>
+                 
+                <div class="form-input">
+                    <h2>
+                    <label for="year_2023">Price in 2023:</label>
+                    <input type="text" name="year_2023" id="year_2023" required>
+                </h2>
+                </div>
+
+                <div class="form-input">
+                    <h2>
+                    <label for="prediction_year">Year to Predict:</label>
+                    <input type="text" name="prediction_year" id="prediction_year" required>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="form-input">
+                <input type="submit" value="Predict">
+            </div>
+        </form>
+
+        {% if predicted_price is defined %}
+        <div class="predicted-price">
+            <h2>Predicted Price in {{ prediction_year }}:</h2>
+            <p>{{ predicted_price }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
