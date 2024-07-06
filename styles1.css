@@ -1,0 +1,110 @@
+/* Reset some default styles */
+body, h1, h2, label, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and default font family */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the heading text at the top */
+h1 {
+    text-align: center;
+    font-weight: bold; /* Make the heading text bolder */
+    margin-top: 0px; /* Add space between the title and form */
+}
+
+/* Center-align the entire page content */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh; /* Ensure full viewport height */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/026/481/324/original/the-world-of-classic-muscle-cars-with-this-captivating-4k-wallpaper-free-photo.jpg'); /* Set the background image URL */
+    background-size: cover; /* Cover the entire background */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+/* Center-align the form elements */
+.centered-form {
+    text-align: center;
+}
+
+/* Style the labels */
+label {
+    font-weight: bold; /* Make the labels bolder */
+}
+
+/* Add some spacing between form elements */
+.input-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background color */
+    padding: 50px; /* Add padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0; /* Adjusted margin for spacing */
+    width: 70%; /* Set width to 80% of the container */
+}
+
+/* Center-align the predicted price */
+.predicted-price {
+    text-align: center;
+    margin-top: 10px; /* Adjusted margin for spacing */
+    font-weight: bold; /* Make the predicted price text bolder */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background color */
+    padding: 10px; /* Slightly reduced padding for smaller size */
+    border-radius: 10px; /* Rounded corners */
+    width: 35%; /* Reduced width for a smaller block */
+}
+
+/* Add styles for the About section */
+#about-section {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#about-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#developers {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 5px 2px #ccc;
+}
+
+#developers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#developers ul li {
+    margin: 5px 0;
+}
+
+/* Add animation for opening the developers section */
+.slide-down {
+    animation-name: slide-down;
+    animation-duration: 0.5s;
+}
+
+/* Animation keyframes for sliding down */
+@keyframes slide-down {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
